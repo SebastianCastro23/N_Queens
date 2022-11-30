@@ -6,6 +6,6 @@ un tablero NxN tal que no se ataquen entre ellas, luego debemos considerar
 * Una reina ataca a otra cuando se encuentra en la misma linea horizontal, vertical o en sus diagonales o 
 alrededor.
 * Cuando N=2 o N=3, ninguna asignación es posible 
-<br> Actualmente 
+<p> Actualmente 
 
 ## Navegacion y reproducción del proyecto:
