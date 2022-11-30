@@ -7,11 +7,11 @@ un tablero NxN tal que no se ataquen entre ellas, luego debemos considerar
 alrededor.
 * Cuando N=2 o N=3, ninguna asignación es posible 
 <p> Problema de satisfaccion de restricciones con dominio finito y restricciones de obligación binarias, se ha comprobado 
-  que el problema de las N-reinas completo es NP-completo y #P-completo<sup>[1]</sup>
+  que el problema de las N-reinas completo es NP-completo y #P-completo<sup>[1]</sup><!-- [^1] -->
   
   >"The complexity of then-Queens problem is often misunderstood. The decision problemis solvable in constant time since there is a solution for alln >3so is only NP-hard if P=NP."<sup>[1]</sup>
    
 ## Navegacion y reproducción del proyecto:
 
   
-<b id="1">1</b>:View of complexity of n-queens completion. (s/f). Jair.org. Recuperado el 28 de noviembre de 2022, de https://jair.org/index.php/jair/article/view/11079/26262
+[1]:View of complexity of n-queens completion. (s/f). Jair.org. Recuperado el 28 de noviembre de 2022, de https://jair.org/index.php/jair/article/view/11079/26262
