@@ -14,4 +14,4 @@ alrededor.
 ## Navegacion y reproducción del proyecto:
 
   
-[^1]:View of complexity of n-queens completion. (s/f). Jair.org. Recuperado el 28 de noviembre de 2022, de https://jair.org/index.php/jair/article/view/11079/26262
+<b id="1">1</b>:View of complexity of n-queens completion. (s/f). Jair.org. Recuperado el 28 de noviembre de 2022, de https://jair.org/index.php/jair/article/view/11079/26262
