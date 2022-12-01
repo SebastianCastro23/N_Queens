@@ -4,7 +4,7 @@ import globals as gl
 from memory_profiler import profile
 import copy
 
-N = 5 # N will be the number of queens that also represents the size of the board 
+N = 20 # N will be the number of queens that also represents the size of the board 
 queens = list(np.arange(1,N+1)) # arrange with the columns of the N queens, the index represents the row in wich each queen is 
 attack = [] # columns of the queens that will be attacked
 
@@ -58,8 +58,8 @@ def perform_swap(queen_i,queen_j,collisions,queens):
 
 
 
-#@gl.mide_tiempo
-@profile
+@gl.mide_tiempo
+#@profile
 # given N be the size of the board lets let each row have exactly one queen
 def queen_search(queen):
 
@@ -75,7 +75,7 @@ def queen_search(queen):
         while loopCount < 32*N:      # bound the iterations, it doesn't affect at all the solution for large n
             for k in range(0,number_of_attacks):
                 i = attack[k]           # idea: find a arrangement so this queen has no conflict
-                j = rd.randint(1,4)     # use a random queen for exchange
+                j = rd.randint(1,N)     # use a random queen for exchange
                 if swap_ok(i,j,queen):          
                     rta = perform_swap(i,j,collisions,queen) # update the queens array in case the swap is perform
                     collisions = rta[0]
