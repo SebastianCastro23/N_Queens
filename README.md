@@ -11,10 +11,10 @@ alrededor.
   
   >"The complexity of then-Queens problem is often misunderstood. The decision problem is solvable in constant time since there is a solution for all n >3 so is only NP-hard if P=NP."<sup>[^1]</sup>
   
-<p> Se podrán ver implementaciones de distintos algoritmos para la resolución del problema anteriormente planteado en busca de exponer eficiencia y complejidad, se podra ver documentación que data distintas formas de resolución de este problema como implementaciones con Fireflies y algoritmos geneticos, sin embargo nos centraremos en revisar a profundidad los siguientes algoritmos:
-  * Hill climbing y variante
-  * Backtracking y variante Branch and Bound
-  * Compresión iterativa
+<br> Se podrán ver implementaciones de distintos algoritmos para la resolución del problema anteriormente planteado en busca de exponer eficiencia y complejidad, se podra ver documentación que data distintas formas de resolución de este problema como implementaciones con Fireflies y algoritmos geneticos, sin embargo nos centraremos en revisar a profundidad los siguientes algoritmos:
+* Hill climbing y dos variantes
+* Backtracking y variante usando metodo de optimizacion Branch and Bound
+* Algoritmo de busqueda eficiente de Sosic y Jun Gu
   
    
 ## Navegacion y reproducción del proyecto:
