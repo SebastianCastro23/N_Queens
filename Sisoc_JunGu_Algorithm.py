@@ -4,7 +4,7 @@ import globals as gl
 from memory_profiler import profile
 import copy
 
-N = 20 # N will be the number of queens that also represents the size of the board 
+N = 50 # N will be the number of queens that also represents the size of the board 
 queens = list(np.arange(1,N+1)) # arrange with the columns of the N queens, the index represents the row in wich each queen is 
 attack = [] # columns of the queens that will be attacked
 
