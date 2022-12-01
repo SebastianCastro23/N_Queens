@@ -3,7 +3,7 @@
 import random
 import copy
 
-n = 50
+n = 100
 
 # State class
 class state:
@@ -61,6 +61,9 @@ def conflict_count_1st(queens):
                     conflicts += 1
     return conflicts
 
+
+# Conflict count second version
+
 def conflict_count_2nd(state):
     conflicts = 0;
     for q in state.queens:
@@ -73,8 +76,6 @@ def conflict_count_2nd(state):
             if state.diagonals[1][(q[0]+q[1])-1] > 1:
                 conflicts += (state.diagonals[1][(q[0]+q[1])-1]-1)
     return conflicts
-
-# Conflict count second version
                         
 
 #Genariting randomly the initial state      
@@ -116,31 +117,65 @@ steps = [queens]
 #     current_state.queens = new_states_queens[conflicts_number.index(min(conflicts_number))]     # we change the queens position of the current state
 #                                                                                                 to the one that causes the less conflicts
                                                                                                 
-# Second Version
+# # Second Version
+
+# while conflict_count_2nd(current_state) != 0:                        # it keeps running while the number of conflicts is different than 0
+    
+#     new_states_queens = []                                              # here we store all the posible new state queen's configurations
+        
+#     for q in current_state.queens:                                      # we do this for each one of the n queens
+#         moved_q = move_queen(q)                                         # call the move_queen function
+    
+#         for i in moved_q:                                               # for every queen's possible new position we create a state
+#             state_queens = []
+#             for p in range(0,n):
+#                 if p != q[0]:
+#                     state_queens.append(current_state.queens[p])
+#             state_queens.insert(q[0],i)
+#             new_states_queens.append(state_queens)                      # we store the n queens position
+    
+#     conflicts_number = []
+         
+#     for n_queens in new_states_queens:                                  # we calculate and store the number of conflicts for every
+#         new_state = state(n_queens,n)                                   # different configuration
+#         n_conflicts = copy.deepcopy(conflict_count_2nd(new_state))                                                      
+#         conflicts_number.append(n_conflicts/2)                            
+    
+#     steps.append(new_states_queens[conflicts_number.index(min(conflicts_number))])
+#     current_state.queens = new_states_queens[conflicts_number.index(min(conflicts_number))]     # we change the queens position of the current state
+#                                                                                                 # to the one that causes the less conflict
+
+# Third version
 
 while conflict_count_2nd(current_state) != 0:                        # it keeps running while the number of conflicts is different than 0
     
-    new_states_queens = []                                              # here we store all the posible new state queen's configurations
+    flag = False
+    equal_states = []
+    of_conflicts = conflict_count_2nd(current_state)
         
     for q in current_state.queens:                                      # we do this for each one of the n queens
+        if flag:
+            break
         moved_q = move_queen(q)                                         # call the move_queen function
+        state_queens = copy.deepcopy(current_state.queens)
+        state_queens.remove(q)
     
         for i in moved_q:                                               # for every queen's possible new position we create a state
-            state_queens = []
-            for p in range(0,n):
-                if p != q[0]:
-                    state_queens.append(current_state.queens[p])
             state_queens.insert(q[0],i)
-            new_states_queens.append(state_queens)                      # we store the n queens position
-    
-    conflicts_number = []
-         
-    for n_queens in new_states_queens:  
-        new_state = state(n_queens,n) 
-        n_conflicts = copy.deepcopy(conflict_count_2nd(new_state))                                                      
-        conflicts_number.append(n_conflicts/2)                            
-    
-    steps.append(new_states_queens[conflicts_number.index(min(conflicts_number))])
-    current_state.queens = new_states_queens[conflicts_number.index(min(conflicts_number))]     # we change the queens position of the current state
-                                                                                                # to the one that causes the less conflict
-    print(len(steps))
+            new_state = state(state_queens,n)
+            n_conflicts = copy.deepcopy(conflict_count_2nd(new_state))
+            if n_conflicts < conflict_count_2nd(current_state):
+                steps.append(state_queens) 
+                current_state.queens = copy.deepcopy(state_queens)                    # we change the queens position of the current state 
+                flag = True  
+                break
+            if n_conflicts == conflict_count_2nd(current_state):
+                equal_states.append(copy.deepcopy(state_queens))
+            state_queens.remove(i)
+            
+    if not flag:
+        random_index = random.randint(0,len(equal_states)-1)
+        steps.append(equal_states[random_index])
+        current_state.queens = copy.deepcopy(equal_states[random_index])
+              
+    print(len(steps))                    
