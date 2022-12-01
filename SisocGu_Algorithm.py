@@ -81,6 +81,5 @@ def queen_search(queen):
                         limit = 0.45*collisions 
                         number_of_attacks = attacked_queens(queen)
             loopCount = loopCount + number_of_attacks
-        print(queen)
 
 queen_search(queens)
