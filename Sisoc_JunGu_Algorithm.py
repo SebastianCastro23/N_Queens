@@ -4,7 +4,7 @@ import globals as gl
 from memory_profiler import profile
 import copy
 
-N = 20 # N will be the number of queens that also represents the size of the board 
+N = 100 # N will be the number of queens that also represents the size of the board 
 queens = list(np.arange(1,N+1)) # arrange with the columns of the N queens, the index represents the row in wich each queen is 
 attack = [] # columns of the queens that will be attacked
 
@@ -15,8 +15,6 @@ def conflict_count(queens):
     for q in queens: # q an k represents the columns
         for k in queens:                              # checks every other queen
             if q != k:
-                if q == k:                            # checks queen's column
-                    conflicts += 1
                 if abs(q-k) == abs(queens.index(q)-queens.index(k)):        # checks both queen's diagonals at the same time
                     conflicts += 1
             
@@ -28,7 +26,7 @@ def attacked_queens(queens):
     for q in queens: # q an k represents the columns
         for k in queens:                
             if q != k:
-                if q == k or abs(q-k) == abs(queens.index(q)-queens.index(k)):    # checks queen's column and both queen's diagonals at the same time
+                if abs(queens.index(q)-queens.index(k)):    # checks queen's column and both queen's diagonals at the same time
                     if q not in attack:
                         attack.append(q) # row x column
     num_queens_attacked = len(attack)
@@ -75,7 +73,7 @@ def queen_search(queen):
         while loopCount < 32*N:      # bound the iterations, it doesn't affect at all the solution for large n
             for k in range(0,number_of_attacks):
                 i = attack[k]           # idea: find a arrangement so this queen has no conflict
-                j = rd.randint(1,N)     # use a random queen for exchange
+                j = rd.choice([x for x in range(1,N) if x!=i])    # use a random queen for exchange
                 if swap_ok(i,j,queen):          
                     rta = perform_swap(i,j,collisions,queen) # update the queens array in case the swap is perform
                     collisions = rta[0]
