@@ -1,5 +1,7 @@
 import numpy as np
 import random as rd
+import globals as gl
+from memory_profiler import profile
 import copy
 
 N = 5 # N will be the number of queens that also represents the size of the board 
@@ -56,6 +58,8 @@ def perform_swap(queen_i,queen_j,collisions,queens):
 
 
 
+#@gl.mide_tiempo
+@profile
 # given N be the size of the board lets let each row have exactly one queen
 def queen_search(queen):
 
