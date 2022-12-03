@@ -1,5 +1,5 @@
-Time_PrimeraVersion;0.0080;0.0978;1.2372;46.1469;668.7137;
-Pasos_PrimeraVersion;6;10;19;45;93;
-Time_SegundaVersion;0.0085;0.1343;1.4477;61.7126;700;
-Pasos_SegundoVersion;6;14;22;59;86;
-N-reinas;5;10;20;50;100;
+Time_PrimeraVersion;0.0080;0.0978;1.2372;46.1469;668.7137;0;0;0;
+Pasos_PrimeraVersion;6;10;19;45;93;0;0;0;
+Time_SegundaVersion;0.0085;0.1343;1.4477;61.7126;700;0;0;0;
+Pasos_SegundoVersion;6;14;22;59;86;0;0;0;
+N-reinas;5;10;20;50;60;70;80;100;
