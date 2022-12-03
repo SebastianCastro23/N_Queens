@@ -181,7 +181,7 @@ def third_version(initial_state, steps):
               
     return(len(steps))   
 
-n = 10
+n = 60
     
 #Genariting randomly the initial state      
 queens = []
