@@ -181,7 +181,7 @@ def third_version(initial_state, steps):
               
     return(len(steps))   
 
-n = 60
+n = 50
     
 #Genariting randomly the initial state      
 queens = []
@@ -193,4 +193,4 @@ for x in range (0,n):
 initial_state = state(queens,n)                     # Declaring the initial state
 steps = [queens]
 
-print(first_version(initial_state, steps))          # calls the algorithm               
+print(third_version(initial_state, steps))          # calls the algorithm               
