@@ -3,6 +3,7 @@
 import random
 import copy
 import globals as gl
+from memory_profiler import profile
 
 # State class
 class state:
@@ -82,7 +83,7 @@ def find_indices(list_to_check, item_to_find):
 
 #First version
 
-@gl.mide_tiempo
+@profile
 def first_version(initial_state, steps):
     current_state = initial_state
     while conflict_count_1st(current_state.queens) != 0:                        # it keeps running while the number of conflicts is different than 0
@@ -114,7 +115,7 @@ def first_version(initial_state, steps):
                                                                                                 
 # Second Version
 
-@gl.mide_tiempo
+@profile
 def second_version(initial_state, steps):
     current_state = initial_state
     while conflict_count_2nd(current_state) != 0:                           # it keeps running while the number of conflicts is different than 0
@@ -146,7 +147,7 @@ def second_version(initial_state, steps):
 
 # Third version
 
-@gl.mide_tiempo
+@profile
 def third_version(initial_state, steps):
     current_state = initial_state
     while conflict_count_2nd(current_state) != 0:                                           # it keeps running while the number of conflicts is different than 0
