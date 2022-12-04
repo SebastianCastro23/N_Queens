@@ -1,7 +1,8 @@
-
+import globals as gl
 import heapq
 
 # Represents a chess board for NQueens
+
 class NQueensProblem:
     def __init__(self, n, goal_state=None):
         self.init_state = tuple([-1] * n)
@@ -122,7 +123,7 @@ class NodeU(Node):  # Uniform-Cost Node:
         return self.path_cost < other.path_cost
 
 
-
+@gl.mide_tiempo
 def uniform_cost_search(problem):
     node = NodeU(problem.init_state)
     return optimal_search(node, problem)
@@ -150,7 +151,7 @@ def optimal_search(node, problem):
                 heapq.heappush(frontier, i)
     return Node(0, None, None)  # if frontier is empty, no solution
 
-board = NQueensProblem(8)  # A* can solve up to around 15 queens fast
+board = NQueensProblem(15)  # A* can solve up to around 15 queens fast
 a_star = a_star_search(board)
 uniform_cost = uniform_cost_search(board)
 print('A*: ' + str(a_star.solution()))

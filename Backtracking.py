@@ -1,4 +1,4 @@
-
+import globals as gl
 def is_valid(row, col, queens):
     for r in range(row):
         #Valida columnas
@@ -16,7 +16,7 @@ def place_queen(row, queens, n):
     #si la última fila de la matriz guardada coincide con
     #el tamaño del tablero se ha encontrado una solución
     if row == n:
-        #print(queens)
+        print(queens)
         return 1
     else:
         total_solns = 0
@@ -27,9 +27,11 @@ def place_queen(row, queens, n):
                 queens[row] = col
                 total_solns += place_queen(row+1, queens, n)
         return total_solns
+@gl.mide_tiempo
 def n_queens(n):
     queens = [' ']*n
     row = 0
     return place_queen(row, queens, n) 
-
-n_queens(5)
+n=8
+print(n)
+print(n_queens(n))
