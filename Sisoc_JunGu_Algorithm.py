@@ -56,8 +56,8 @@ def perform_swap(queen_i,queen_j,collisions,queens):
 
 
 
-@gl.mide_tiempo
-#@profile
+#@gl.mide_tiempo
+@profile
 # given N be the size of the board lets let each row have exactly one queen
 def queen_search(queen):
 
