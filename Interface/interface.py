@@ -284,7 +284,7 @@ class Game:
 
             self.draw_buttons()
             draw_text(self.screen, "N-Queen", 100, SCREEN_WIDTH / 2, 120, YELLOW)
-            draw_text(self.screen, "Select Algorithm", 50, SCREEN_WIDTH / 2, 300, WHITE)
+            draw_text(self.screen, "Select Algorithm and Press Space", 50, SCREEN_WIDTH / 2, 300, WHITE)
 
             pg.display.flip()
         self.buttons = []
