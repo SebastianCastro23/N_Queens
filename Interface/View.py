@@ -4,10 +4,14 @@ global N
 N = 8
 import pygame
 import time
-pygame.init()
-Win = pygame.display.set_mode((800, 800))
-queen = pygame.transform.scale(pygame.image.load('quee.png'),(100,100))
 
+try:
+    l=Game()
+    l.start()
+except:
+    pygame.init()
+    Win = pygame.display.set_mode((800, 800))
+    queen = pygame.transform.scale(pygame.image.load('quee.png'),(100,100))
 def draw(board):
      win = pygame.display.set_mode((800,800))
      win. fill((255, 255, 255))
@@ -92,6 +96,26 @@ def solveNQ(board):
 
     printSolution(board)
 
-
+def main():
+    run = True
+    board=[
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0]
+    ]
+    while run:
+        for event in pygame.event.get():
+            if event.type==pygame.QUIT:
+                run = False
+            if event. type==pygame. KEYDOWN:
+                if event. key==pygame.K_SPACE:
+                    solveNQ(board)
+        draw(board)
+main()
 
 

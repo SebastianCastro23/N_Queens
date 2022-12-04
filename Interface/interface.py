@@ -1,10 +1,9 @@
 from sprites import *
-from View import *
 import csv
 import sys
 import time
 
-font_name = pg.font.match_font('arial')
+font_name = pg.font.match_font('Comic Sans')
 def draw_text(surface, text, size, x, y, color):
     font = pg.font.Font(font_name, size)
     text_surface = font.render(text, True, color)
@@ -51,18 +50,12 @@ class Game:
     def start(self):
         self.show_start_screen()
         self.show_go_screen()
-        self.load_data()
+        self.show_go_screentwo()
         while self.running:
             self.new()
             self.run()
 
-    def load_data(self):
-        self.map_data = list()
-        with open(os.path.join(os.path.dirname(__file__) + '/mazes', csv_name), 'rt') as f:
-            reader = csv.reader(f)
-            for row in reader:
-                if row:
-                    self.map_data.append(row)
+
 
     def new(self):
         self.all_sprites = pg.sprite.Group()
@@ -90,18 +83,7 @@ class Game:
         button1 = Button(self, "BACK", SCREEN_WIDTH*0.92, SCREEN_HEIGHT*0.9, RED, (100, 50), 25)
         self.buttons.append(button1)
 
-        depth_iter = -2
-        dif = 3
-        if N_TILES == 50:
-            dif = 16
-        elif N_TILES == 100:
-            dif = 26
-        elif N_TILES == 400:
-            dif = 40
-
-        if self.mode != 'iter':
-            self.load_solution(self.mode)
-            self.solved = True
+       
 
         while self.playing:
             self.clock.tick(FPS)
@@ -116,13 +98,6 @@ class Game:
                 elif N_TILES == 50:
                     time.sleep(0.03)
 
-            elif self.mode == 'iter' and not self.solved:
-                for step in self.steps:
-                    step.kill()
-                depth_iter += dif
-                self.load_solution(self.mode, depth_iter)
-                if self.search_coor[-1] == self.end:
-                    self.solved = True
 
             elif self.solved == True:
                 if self.instructions:
@@ -208,7 +183,6 @@ class Game:
             for event in pg.event.get():
                 if event.type == pg.QUIT:
                     pg.quit()
-                    sys.exit()
                 if event.type == pg.MOUSEBUTTONDOWN:
                     mpos = pg.mouse.get_pos()
                     if button1.rect.collidepoint(mpos):
@@ -240,7 +214,7 @@ class Game:
 
 
             self.draw_buttons()
-            draw_text(self.screen, "N-Queens Problem", 100, SCREEN_WIDTH / 2, 120, YELLOW)
+            draw_text(self.screen, "N-Queens", 100, SCREEN_WIDTH / 2, 120, YELLOW)
             draw_text(self.screen, "Select Algorithn", 50, SCREEN_WIDTH / 2, 300, WHITE)
 
             pg.display.flip()
@@ -299,35 +273,22 @@ class Game:
             for event in pg.event.get():
                 if event.type == pg.QUIT:
                     pg.quit()
-                    sys.exit()
-                    main()
                 if event.type == pg.MOUSEBUTTONDOWN:
                     mpos = pg.mouse.get_pos()
                     self.mode = 'Standard'
                     self.showing_menu = False
-
-                    if button2.rect.collidepoint(mpos):
-                        self.mode = 'bfs'
-                        self.showing_menu = False
-
-                    elif button3.rect.collidepoint(mpos):
-                        self.mode = 'iter'
-                        self.showing_menu = False
-
-                    elif button4.rect.collidepoint(mpos):
-                        self.mode = 'ucs'
-                        self.showing_menu = False
-
-                    elif button5.rect.collidepoint(mpos):
-                        self.mode = 'greedy'
-                        self.showing_menu = False
+                    pg.quit()
                     
     
 
 
             self.draw_buttons()
-            draw_text(self.screen, "N-Queens Problem", 100, SCREEN_WIDTH / 2, 120, YELLOW)
+            draw_text(self.screen, "N-Queen", 100, SCREEN_WIDTH / 2, 120, YELLOW)
             draw_text(self.screen, "Select Algorithm", 50, SCREEN_WIDTH / 2, 300, WHITE)
 
             pg.display.flip()
         self.buttons = []
+    def show_go_screentwo(self):
+        global TILESIZE, csv_name, maze, N_TILES
+        self.showing_menu = True
+
