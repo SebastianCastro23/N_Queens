@@ -181,7 +181,11 @@ def third_version(initial_state, steps):
               
     return(len(steps))   
 
+<<<<<<< HEAD
 n = 4
+=======
+n = 80
+>>>>>>> 15d8c834cfd9c7cd9c7d894c78e82fafd459f67d
     
 #Genariting randomly the initial state      
 queens = []

@@ -1,7 +1,5 @@
-Time_PrimeraVersion;0.0020;0.0287;0.4103;18.5128;36.6790;66.9922;110.0964;0
-Pasos_PrimeraVersion;6;10;20;45;55;62;71;0
-
-Time_SegundaVersion;0.0027;0.0344;0.6802;
-Pasos_SegundoVersion;6;14;22;59;86;0;0;0;
-
+Time_PrimeraVersion;0.0020;0.0287;0.4103;18.5128;36.6790;66.9922;110.0964;430.175;
+Pasos_PrimeraVersion;6;10;20;45;55;62;71;91;
+Time_SegundaVersion;0.0027;0.0344;0.6802;31.6516;53.1625;94.3635;187.841;680.290;
+Pasos_SegundoVersion;7;12;26;64;67;81;95;112;
 N-reinas;5;10;20;50;60;70;80;100;
