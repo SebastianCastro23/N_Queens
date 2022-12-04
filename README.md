@@ -18,10 +18,16 @@ alrededor.
   
    
 ## Navegacion y reproducción del proyecto:
+El proyecto esta hecho en su totalidad en python tanto la interfaz grafica como los algoritmos implementados, aunque no se requiere mucho para la ejecución igualmente cabe nombrar lo siguiente.<br>
+Para la ejecución de los algoritmos (Backtracking.py,Hill_Climbing.py,Uniform_Cos-Search.py y Sisoc_JunGu_Algorithm.py) tengase en cuenta la presencia de las siguientes librerias utilizadas de python: 
+  - globals
+  - copy
+  - random
+  - memory_profiler 
+  - heapq.
 ## Especificaciones para acceso a recursos pedidos en la entrega:
  Visualización edición del reporte del proyecto final: [Acercamiento e implementación de algoritmos para la resolución del problema de las N-reinas](https://www.overleaf.com/2218436297jnttdwfzsygd).<br>
- Visualización del video explicativo: [Video Presentación Proyecto final Inteligencia artificial]().<br>
- Para la visualización del Notebook, Véase el archivo marcado N-queens problem-Notebook.ipynb<br>
- Para la visualización de las presentaciones usadas en el video explicativo, véase el archivo Presentaciones-Nqueens<br>
+ Visualización del video explicativo: [Video Presentación Proyecto final Inteligencia artificial](https://youtu.be/RV19d8TX-ag).<br>
+ Para la visualización del Notebook, <b>Véase el archivo marcado N-queens problem-Notebook.ipynb</b><br>
   
 [^1]: View of complexity of n-queens completion. (s/f). Jair.org. Recuperado el 28 de noviembre de 2022, de https://jair.org/index.php/jair/article/view/11079/26262
