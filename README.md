@@ -20,7 +20,7 @@ alrededor.
 ## Navegacion y reproducción del proyecto:
 ## Especificaciones para acceso a recursos pedidos en la entrega:
  Visualización edición del reporte del proyecto final: [Acercamiento e implementación de algoritmos para la resolución del problema de las N-reinas](https://www.overleaf.com/2218436297jnttdwfzsygd).<br>
- Visualización del video explicativo: [Video Presentación Proyecto final Inteligencia artificial]().<br>
+ Visualización del video explicativo: [Video Presentación Proyecto final Inteligencia artificial](https://youtu.be/RV19d8TX-ag).<br>
  Para la visualización del Notebook, Véase el archivo marcado N-queens problem-Notebook.ipynb<br>
  Para la visualización de las presentaciones usadas en el video explicativo, véase el archivo Presentaciones-Nqueens<br>
   
