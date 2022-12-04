@@ -28,11 +28,12 @@ Para la ejecución de los algoritmos (Backtracking.py,Hill_Climbing.py,Uniform_C
 ## Implementación de la interfaz 
 
 Para la vista de la interfaz la cual muestra la representación gráfica de la solución de las N_Queen se ejecuta el archivo View.py. Cabe resalatar que solo se pudo graficar el Bactarcking estándar. De este se despliega el menu principal. Se selecciona el Bactracking y posteriormente saldrá la opción Standard, se selecciona y en la otra ventana ejecuta la solucion de las N-Queens 8x8 usando el algoritmo de Backtracking.
-## Especificaciones para acceso a recursos pedidos en la entrega:
 Librerias usadas:
-   -Pygame
-   -Time
-   -Os.
+  - Pygame
+  - Time
+  - Os.
+## Especificaciones para acceso a recursos pedidos en la entrega:
+
  Visualización edición del reporte del proyecto final: [Acercamiento e implementación de algoritmos para la resolución del problema de las N-reinas](https://www.overleaf.com/2218436297jnttdwfzsygd).<br>
  Visualización del video explicativo: [Video Presentación Proyecto final Inteligencia artificial](https://youtu.be/RV19d8TX-ag).<br>
  Para la visualización del Notebook, <b>Véase el archivo marcado N-queens problem-Notebook.ipynb</b><br>
