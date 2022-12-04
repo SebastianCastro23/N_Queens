@@ -19,7 +19,12 @@ alrededor.
    
 ## Navegacion y reproducción del proyecto:
 El proyecto esta hecho en su totalidad en python tanto la interfaz grafica como los algoritmos implementados, aunque no se requiere mucho para la ejecución igualmente cabe nombrar lo siguiente.<br>
-Para la ejecución de los algoritmos (Backtracking.py,Hill_Climbing.py,Uniform_Cos-Search.py y Sisoc_JunGu_Algorithm.py) tengase en cuenta la presencia de las siguientes librerias utilizadas de python: globals, copy, random, memory_profiler y heapq.
+Para la ejecución de los algoritmos (Backtracking.py,Hill_Climbing.py,Uniform_Cos-Search.py y Sisoc_JunGu_Algorithm.py) tengase en cuenta la presencia de las siguientes librerias utilizadas de python: 
+  - globals
+  - copy
+  - random
+  - memory_profiler 
+  - heapq.
 ## Especificaciones para acceso a recursos pedidos en la entrega:
  Visualización edición del reporte del proyecto final: [Acercamiento e implementación de algoritmos para la resolución del problema de las N-reinas](https://www.overleaf.com/2218436297jnttdwfzsygd).<br>
  Visualización del video explicativo: [Video Presentación Proyecto final Inteligencia artificial](https://youtu.be/RV19d8TX-ag).<br>
